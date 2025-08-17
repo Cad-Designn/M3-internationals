@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { Expertise } from "../components/Expertixe";
 import { Craftsmanship } from "../components/Craftmanship";
-import { Whyus } from "../components/whyUs";
+import { Whyus } from "../components/WhyUs";
 
 const Home: React.FC = () => {
   // right-side parallax section
