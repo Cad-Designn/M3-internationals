@@ -113,6 +113,29 @@ export const Expertise = () => {
           </div>
         </div>
       </div>
+      <div className="w-full h-[80vh] flex mt-[10vh] px-10 gap-8">
+        {/* Left Content */}
+        <div className="flex flex-col justify-center w-[70%] h-[80vh] ">
+          <img
+            src="/jcb.jpeg"
+            className="h-[360px] w-[360px] absolute -translate-x-1/2 right-1/4 z-10"
+          />
+        </div>
+        <div className="relative w-[70%] h-[80vh] overflow-hidden">
+          {/* Fixed background image */}
+          <div
+            className="absolute inset-0 w-full bg-black bg-[url('/woodCarpend.jpeg')] bg-right bg-no-repeat "
+            style={{
+              backgroundAttachment: "fixed", // parallax effect
+              clipPath: "inset(0 0% 0% 0)",
+              backgroundSize: "50%", // adjust bottom to reveal
+            }}
+          >
+            {/* Overlay */}
+            <div className="w-full h-full "></div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
