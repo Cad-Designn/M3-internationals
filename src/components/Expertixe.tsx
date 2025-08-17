@@ -103,7 +103,7 @@ export const Expertise = () => {
         {/* Parallax "window" */}
         <div className="relative w-[30%] h-full overflow-hidden">
           <div
-            className="absolute  w-full bg-black bg-[url('/overlay.jpeg')] bg-no-repeat "
+            className="absolute bg-cover inset-0 w-full bg-black bg-[url('/overlay.jpeg')] bg-no-repeat "
             style={{
               backgroundAttachment: "fixed", // parallax effect
               clipPath: "inset(0 0% 0% 0)",
