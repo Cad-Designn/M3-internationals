@@ -1,60 +1,57 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
-import ParallaxSection from '../components/ParallaxSection';
-import Footer from '../components/Footer';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
+import ParallaxSection from "../components/ParallaxSection";
+import Footer from "../components/Footer";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
     });
   };
 
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 123-4568'],
+      title: "Phone",
+      details: ["+91-9656414669"],
     },
     {
       icon: Mail,
-      title: 'Email',
-      details: ['info@premiumbuild.com', 'projects@premiumbuild.com'],
+      title: "Email",
+      details: ["m3international41@gmail.com"],
     },
     {
       icon: MapPin,
-      title: 'Address',
-      details: ['123 Construction Avenue', 'City, State 12345'],
+      title: "Address",
+      details: ["M3 International Private Limited Vadacodu kura p.o"],
     },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: ['Mon - Fri: 8:00 AM - 6:00 PM', 'Sat: 9:00 AM - 4:00 PM'],
-    }
   ];
 
   return (
@@ -100,8 +97,8 @@ const Contact: React.FC = () => {
               </h2>
               <div className="w-16 h-1 bg-black mb-8"></div>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                We're here to help bring your construction dreams to reality. 
-                Reach out to us through any of the following channels, and we'll 
+                We're here to help bring your construction dreams to reality.
+                Reach out to us through any of the following channels, and we'll
                 respond promptly to discuss your project needs.
               </p>
 
@@ -140,14 +137,20 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-sm">
+              <form
+                onSubmit={handleSubmit}
+                className="bg-gray-50 p-8 rounded-sm"
+              >
                 <h3 className="text-2xl font-serif font-bold text-black mb-6">
                   Send us a Message
                 </h3>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -162,7 +165,10 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -180,7 +186,10 @@ const Contact: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -194,7 +203,10 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Project Type
                     </label>
                     <input
@@ -210,7 +222,10 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -232,7 +247,10 @@ const Contact: React.FC = () => {
                   className="w-full bg-black text-white py-4 px-6 rounded-sm font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center justify-center group"
                 >
                   Send Message
-                  <Send size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <Send
+                    size={18}
+                    className="ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                  />
                 </motion.button>
               </form>
             </motion.div>
@@ -255,7 +273,8 @@ const Contact: React.FC = () => {
             </h2>
             <div className="w-16 h-1 bg-black mx-auto mb-6"></div>
             <p className="text-lg text-gray-600">
-              Stop by our showroom to see our work up close and discuss your project in person.
+              Stop by our showroom to see our work up close and discuss your
+              project in person.
             </p>
           </motion.div>
 
@@ -270,7 +289,9 @@ const Contact: React.FC = () => {
               <div className="text-center text-gray-600">
                 <MapPin size={48} className="mx-auto mb-4" />
                 <p className="text-lg">Interactive Map</p>
-                <p className="text-sm">123 Construction Avenue, City, State 12345</p>
+                <p className="text-sm">
+                  M3 International Private Limited Vadacodu kura p.o
+                </p>
               </div>
             </div>
           </motion.div>

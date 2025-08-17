@@ -106,11 +106,11 @@ const About: React.FC = () => {
               viewport={{ once: true }}
             >
               <div className="overflow-hidden rounded-sm">
-                <img
+                {/* <img
                   src="https://images.pexels.com/photos/3964736/pexels-photo-3964736.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Our Story"
                   className="w-full h-96 object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
-                />
+                /> */}
               </div>
             </motion.div>
           </div>

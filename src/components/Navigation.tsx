@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "Book Online", path: "/book" },
+    // { name: "Book Online", path: "/book" },
   ];
 
   return (
