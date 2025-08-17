@@ -1,6 +1,6 @@
 import { motion, Variants } from "framer-motion";
 
-export const Whyus = () => {
+export const WhyUs = () => {
   // Red box animation (reveal from right → left)
   const revealVariant: Variants = {
     hidden: { clipPath: "inset(0 100% 0 0)" },

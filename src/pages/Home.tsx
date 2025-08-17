@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { Expertise } from "../components/Expertixe";
 import { Craftsmanship } from "../components/Craftmanship";
-import { Whyus } from "../components/whyUs";
+import { WhyUs } from "../components/whyUs";
 
 const Home: React.FC = () => {
   // right-side parallax section
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
       <Expertise />
       <Craftsmanship />
       {/* Why Choose Us Section */}
-      <Whyus />
+      <WhyUs />
       <Footer />
     </div>
   );
