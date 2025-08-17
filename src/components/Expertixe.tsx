@@ -1,3 +1,5 @@
+import { motion, Variants } from "framer-motion";
+
 export const Expertise = () => {
   const services = [
     {
@@ -32,10 +34,42 @@ export const Expertise = () => {
     },
   ];
 
+  // Animation variants for cards
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    }),
+    hover: { scale: 1.05, transition: { duration: 0.3 } },
+  };
+  const textItem: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+  const textContainer: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.25 }, // delay between each child
+    },
+  };
+
   return (
-    <section className="py-24  ">
+    <section className="py-24">
       {/* Heading */}
-      <div className=" mb-20 px-10">
+      <motion.div
+        className="mb-20 px-10"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <h2 className="text-5xl md:text-6xl font-serif font-bold text-black mb-6">
           Our Expertise
         </h2>
@@ -44,98 +78,102 @@ export const Expertise = () => {
           From concept to completion, we deliver exceptional construction
           solutions that exceed expectations and stand the test of time.
         </p>
-      </div>
+      </motion.div>
+
+      {/* First 3 cards */}
       <div className="grid md:grid-cols-3 mx-10 gap-6">
-        {/* First 3 cards in row */}
         {services.slice(0, 3).map((service, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-[#474D60] text-white p-8 flex flex-col items-start"
+            className="bg-[#474D60] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index}
+            whileHover="hover"
           >
-            {/* Red Hexagon */}
             <div
               className="w-10 h-6 rotate-45 bg-[#DB3830] mb-4
               [clip-path:polygon(25%_0,75%_0,100%_50%,75%_100%,25%_100%,0_50%)]"
             ></div>
-
-            {/* Title */}
             <h3 className="text-xl font-medium mb-2">{service.title}</h3>
-
-            {/* Description */}
             <p className="text-white/80">{service.description}</p>
-          </div>
+          </motion.div>
         ))}
 
-        {/* Bottom row with 2 centered cards */}
-        <div className="md:col-span-3 grid  md:grid-cols-2 gap-6">
+        {/* Bottom row */}
+        <div className="md:col-span-3 grid md:grid-cols-2 gap-6">
           {services.slice(3).map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-[#474D60] text-white p-8 flex flex-col items-start"
+              className="bg-[#474D60] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={index}
+              whileHover="hover"
             >
-              {/* Red Hexagon */}
               <div
                 className="w-10 h-6 rotate-45 bg-[#DB3830] mb-4
                 [clip-path:polygon(25%_0,75%_0,100%_50%,75%_100%,25%_100%,0_50%)]"
               ></div>
-
-              {/* Title */}
               <h3 className="text-xl font-medium mb-2">{service.title}</h3>
-
-              {/* Description */}
               <p className="text-white/80">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-      <div className="w-full h-[80vh] mt-[10vh] px-10 flex gap-8">
-        {/* Left Content */}
-        <div className="bg-red-500 px-10 flex flex-col justify-center w-[70%]">
-          <p className="text-white text-lg">Building Excellence</p>
-          <h1 className="text-white font-extrabold w-[70%] text-[58px] leading-tight">
-            Serving Clients in the Region
-          </h1>
-          <button className="mt-6 w-fit bg-white text-black/70 font-medium px-6 py-3 rounded-md hover:bg-gray-200 transition">
-            Contact
-          </button>
-        </div>
 
-        {/* Parallax "window" */}
-        <div className="relative w-[30%] h-full overflow-hidden">
+      {/* Section with parallax + CTA */}
+      <div className="w-full h-[80vh] mt-[10vh] px-10 flex gap-8">
+        <motion.div
+          className="bg-red-500 px-10 flex flex-col justify-center w-[70%]"
+          variants={textContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.p className="text-white text-lg" variants={textItem}>
+            Building Excellence
+          </motion.p>
+
+          <motion.h1
+            className="text-white font-extrabold w-[70%] text-[58px] leading-tight"
+            variants={textItem}
+          >
+            Serving Clients in the Region
+          </motion.h1>
+
+          <motion.button
+            className="mt-6 w-fit bg-white text-black/70 font-medium px-6 py-3 rounded-md hover:bg-gray-200 transition"
+            variants={textItem}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Contact
+          </motion.button>
+        </motion.div>
+
+        {/* Parallax Window (fade only) */}
+        <motion.div
+          className="relative w-[30%] h-full overflow-hidden"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
           <div
-            className="absolute bg-cover inset-0 w-full bg-black bg-[url('/overlay.jpeg')] bg-no-repeat "
+            className="absolute bg-cover inset-0 w-full bg-black bg-[url('/overlay.jpeg')] bg-no-repeat"
             style={{
-              backgroundAttachment: "fixed", // parallax effect
+              backgroundAttachment: "fixed",
               clipPath: "inset(0 0% 0% 0)",
             }}
           >
-            {/* Overlay */}
             <div className="w-full h-full bg-black/40"></div>
           </div>
-        </div>
-      </div>
-      <div className="w-full h-[80vh] flex mt-[10vh] px-10 gap-8">
-        {/* Left Content */}
-        <div className="flex flex-col justify-center w-[70%] h-[80vh] ">
-          <img
-            src="/jcb.jpeg"
-            className="h-[360px] w-[360px] absolute -translate-x-1/2 right-1/4 z-10"
-          />
-        </div>
-        <div className="relative w-[70%] h-[80vh] overflow-hidden">
-          {/* Fixed background image */}
-          <div
-            className="absolute inset-0 w-full bg-black bg-[url('/woodCarpend.jpeg')] bg-right bg-no-repeat "
-            style={{
-              backgroundAttachment: "fixed", // parallax effect
-              clipPath: "inset(0 0% 0% 0)",
-              backgroundSize: "50%", // adjust bottom to reveal
-            }}
-          >
-            {/* Overlay */}
-            <div className="w-full h-full "></div>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
