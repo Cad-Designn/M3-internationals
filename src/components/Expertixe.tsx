@@ -127,9 +127,9 @@ export const Expertise = () => {
       </div>
 
       {/* Section with parallax + CTA */}
-      <div className="w-full h-[80vh] mt-[10vh] px-10 flex gap-8">
+      <div className="w-full md:h-[80vh] h-[50vh] mt-[10vh] px-10 flex md:gap-8">
         <motion.div
-          className="bg-red-500 px-10 flex flex-col justify-center w-[70%]"
+          className="bg-red-500 md:px-10 px-5 flex flex-col justify-center w-full md:w-[70%]"
           variants={textContainer}
           initial="hidden"
           whileInView="visible"
@@ -140,14 +140,14 @@ export const Expertise = () => {
           </motion.p>
 
           <motion.h1
-            className="text-white font-extrabold w-[70%] text-[58px] leading-tight"
+            className="text-white font-extrabold md:w-[70%] md:text-[58px] text-[20px] leading-tight"
             variants={textItem}
           >
             Serving Clients in the Region
           </motion.h1>
 
           <motion.button
-            className="mt-6 w-fit bg-white text-black/70 font-medium px-6 py-3 rounded-md hover:bg-gray-200 transition"
+            className="mt-6 w-fit  bg-white text-black/70 font-medium px-3 md:px-6 md:py-3 rounded-md hover:bg-gray-200 transition"
             variants={textItem}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -158,7 +158,7 @@ export const Expertise = () => {
 
         {/* Parallax Window (fade only) */}
         <motion.div
-          className="relative w-[30%] h-full overflow-hidden"
+          className="relative   w-[30%] h-full overflow-hidden"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

@@ -4,8 +4,8 @@ export const Craftsmanship = () => {
       {/* Parallax JCB + Background */}
 
       {/* Heading */}
-      <div className=" flex mb-20 px-10 gap-44 ">
-        <h2 className="text-5xl  font-serif  text-black mb-6 flex">
+      <div className=" flex md:flex-row flex-col mb-20 px-10 md:gap-44 gap-10 ">
+        <h2 className="text-5xl  font-serif  text-black md:mb-6 flex">
           Our <br /> Craftsmanship
         </h2>
         <div className="flex flex-col mb-6">
@@ -45,23 +45,22 @@ export const Craftsmanship = () => {
           </span>
         </div>
       </div>
-      <div className="w-full h-[80vh] flex mt-[10vh] px-10 gap-8">
+      <div className="w-full h-[80vh] mt-[10vh] px-10 gap-8 hidden md:flex ">
         {/* JCB */}
-        <div className="flex flex-col justify-center w-[70%] h-[80vh]">
+        <div className="flex flex-col justify-center md:w-[70%] md:h-[80vh]">
           <img
             src="/jcb.jpeg"
-            className="h-[360px] w-[360px] absolute -translate-x-1/2 right-1/4 z-10"
+            className="md:h-[360px] md:w-[360px] w-[150px] h-[150px] absolute -translate-x-1/2 right-1/4 z-10"
           />
         </div>
 
         {/* WoodCarpend Background */}
-        <div className="relative w-[70%] h-[80vh] overflow-hidden">
+        <div className="relative md:w-[70%]  md:h-[80vh] w-full h-[300px] overflow-hidden">
           <div
-            className="absolute inset-0 w-full bg-black bg-[url('/woodCarpend.jpeg')] bg-right bg-no-repeat"
+            className="absolute inset-0 w-full bg-black bg-[url('/woodCarpend.jpeg')] bg-right bg-no-repeat md:bg-[length:80%] bg-[length:150%]"
             style={{
               backgroundAttachment: "fixed",
               clipPath: "inset(0 0% 0% 0)",
-              backgroundSize: "50%",
             }}
           ></div>
         </div>

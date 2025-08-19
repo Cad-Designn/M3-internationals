@@ -31,15 +31,17 @@ const Navigation: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-black border-gray-800"
+          : "bg-transparent border-b-2 border-gray-800"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="text-white font-bold text-2xl tracking-wide">
+          <Link to="/" className="text-white flex items-center">
             <motion.div whileHover={{ scale: 1.05 }} className="font-serif">
-              M3 Internationals
+              <img src="/logo.png" alt="Logo" className="h-[80px] w-[80px]" />
             </motion.div>
           </Link>
 

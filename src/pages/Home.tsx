@@ -39,9 +39,9 @@ const Home: React.FC = () => {
         ref={heroRef}
         data-speed="0.3"
         data-zoom="1.3"
-        className="relative h-[100vh] flex items-center justify-center bg-cover bg-center"
+        className="relative h-[100vh] flex items-center justify-center bg-center md:bg-contain bg-cover  bg-no-repeat bg-black"
         style={{
-          backgroundImage: `url(/img.avif)`,
+          backgroundImage: `url(/logo_bg.jpg)`,
           willChange: "transform, background-position",
           transition: "transform 0.2s ease-out",
         }}

@@ -23,8 +23,8 @@ export const Whyus = () => {
   return (
     <section className="py-24 bg-gray-50">
       {/* Section Header */}
-      <div className="px-4 flex sm:px-6 lg:px-8 mb-16 gap-60">
-        <span className="flex text-5xl md:text-6xl font-serif font-bold text-black mb-6">
+      <div className="px-4 flex flex-col md:flex-row sm:px-6 md:px-8 mb-16 gap-5 md:gap-60">
+        <span className="flex text-5xl md:text-6xl font-serif font-bold text-black md:mb-6">
           Why <br /> Choose Us
         </span>
         <span className="flex text-black/50 items-center">
@@ -40,7 +40,7 @@ export const Whyus = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <div className="bg-transparent h-[450px] w-[450px]"></div>
+        <div className="bg-transparent h-[450px] w-[450px] hidden md:block"></div>
 
         {/* QC */}
         <div className="bg-slate-200 h-[450px] w-[450px] bg-cover bg-[url('/QC.jpeg')] flex items-start">
@@ -89,8 +89,7 @@ export const Whyus = () => {
             <span>Bringing decades of expertise to every project.</span>
           </motion.div>
         </div>
-
-        <div className="bg-transparent h-[450px] w-[450px]"></div>
+        <div className="bg-transparent h-[450px] w-[450px] hidden md:block"></div>
       </motion.div>
     </section>
   );
