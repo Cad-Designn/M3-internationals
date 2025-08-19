@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91-9656414669"],
+      details: ["+91 83018 44445"],
     },
     {
       icon: Mail,

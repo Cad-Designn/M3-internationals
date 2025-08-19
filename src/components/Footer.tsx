@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             </motion.h4>
             <div className="space-y-4">
               {[
-                { icon: Phone, text: "+91-9656414669" },
+                { icon: Phone, text: "+91 83018 44445" },
                 { icon: Mail, text: "m3international41@gmail.com" },
                 {
                   icon: MapPin,
