@@ -24,7 +24,7 @@ export const Whyus = () => {
     <section className="py-24 bg-gray-50">
       {/* Section Header */}
       <div className="px-4 flex flex-col md:flex-row sm:px-6 md:px-8 mb-16 gap-5 md:gap-60">
-        <span className="flex text-5xl md:text-6xl font-serif font-bold text-black md:mb-6">
+        <span className="flex md:text-5xl text-4xl font-serif font-bold text-black md:mb-6">
           Why <br /> Choose Us
         </span>
         <span className="flex text-black/50 items-center">
@@ -34,21 +34,23 @@ export const Whyus = () => {
 
       {/* Grid */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-10"
+        className="grid grid-cols-1 md:grid-cols-3  w-fit gap-10  mx-auto px-5"
         variants={containerVariant}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <div className="bg-transparent h-[450px] w-[450px] hidden md:block"></div>
+        <div className="bg-transparent h-[225px] w-[225px]  md:h-[450px] md:w-[450px] hidden md:block"></div>
 
         {/* QC */}
-        <div className="bg-slate-200 h-[450px] w-[450px] bg-cover bg-[url('/QC.jpeg')] flex items-start">
+        <div className="bg-slate-200 h-[225px] rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/QC.jpeg')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] w-[300px] h-[200px] text-white p-5"
+            className="bg-[#DB3830] h-[130px] w-[200px]  rounded-md md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
-            <span className="text-[30px] block">Quality Craftsmanship</span>
+            <span className="md:text-[30px] text-[15px] font-bold block">
+              Quality Craftsmanship
+            </span>
             <span>
               Quality Craftsmanship Providing transparent and fair pricing.
             </span>
@@ -56,12 +58,14 @@ export const Whyus = () => {
         </div>
 
         {/* SP */}
-        <div className="bg-slate-200 h-[450px] w-[450px] bg-cover bg-[url('/SP.avif')] flex items-start">
+        <div className="bg-slate-200 h-[225px]  rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/SP.avif')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] w-[300px] h-[200px] text-white p-5"
+            className="bg-[#DB3830] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
-            <span className="text-[30px] block">Skilled Professionals</span>
+            <span className="md:text-[30px] text-[15px] font-bold block">
+              Skilled Professionals
+            </span>
             <span>
               Skilled Professionals Qualified and dedicated team members.
             </span>
@@ -69,27 +73,31 @@ export const Whyus = () => {
         </div>
 
         {/* CS */}
-        <div className="bg-slate-200 h-[450px] w-[450px] bg-cover bg-[url('/CS.avif')] flex items-start">
+        <div className="bg-slate-200 h-[225px]  rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/CS.avif')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] w-[300px] h-[200px] text-white p-5"
+            className="bg-[#DB3830] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
-            <span className="text-[30px] block">Customer Satisfaction</span>
+            <span className="md:text-[30px] text-[15px] font-bold block">
+              Customer Satisfaction
+            </span>
             <span>Ensuring a positive experience for every client.</span>
           </motion.div>
         </div>
 
         {/* DE */}
-        <div className="bg-slate-200 h-[450px] w-[450px] bg-cover bg-[url('/DE.jpeg')] flex items-start">
+        <div className="bg-slate-200 h-[225px]  rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/DE.jpeg')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] w-[300px] h-[200px] text-white p-5"
+            className="bg-[#DB3830] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
-            <span className="text-[30px] block">Decades of Experience</span>
+            <span className="md:text-[30px] text-[15px] font-bold block">
+              Decades of Experience
+            </span>
             <span>Bringing decades of expertise to every project.</span>
           </motion.div>
         </div>
-        <div className="bg-transparent h-[450px] w-[450px] hidden md:block"></div>
+        <div className="bg-transparent h-[225px] w-[225px]  md:h-[450px] md:w-[450px] hidden md:block"></div>
       </motion.div>
     </section>
   );

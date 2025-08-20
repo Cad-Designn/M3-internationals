@@ -39,13 +39,14 @@ const Home: React.FC = () => {
         ref={heroRef}
         data-speed="0.3"
         data-zoom="1.3"
-        className="relative h-[100vh] flex items-center justify-center bg-center md:bg-contain bg-cover  bg-no-repeat bg-black"
+        className="relative h-[100vh] flex items-center justify-center bg-center bg-cover  bg-no-repeat "
         style={{
-          backgroundImage: `url(/logo_bg.jpg)`,
+          backgroundImage: `url(/img.avif)`,
           willChange: "transform, background-position",
           transition: "transform 0.2s ease-out",
         }}
       >
+        <div className="h-[100vh] w-full absolute bg-black/60"></div>
         <Hero />
       </div>
       <Expertise />

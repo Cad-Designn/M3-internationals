@@ -5,11 +5,13 @@ export const Craftsmanship = () => {
 
       {/* Heading */}
       <div className=" flex md:flex-row flex-col mb-20 px-10 md:gap-44 gap-10 ">
-        <h2 className="text-5xl  font-serif  text-black md:mb-6 flex">
+        <h2 className="md:text-5xl text-4xl  font-serif  text-black md:mb-6 flex">
           Our <br /> Craftsmanship
         </h2>
         <div className="flex flex-col mb-6">
-          <h1 className="text-5xl font-serif  text-black">Where We Excel</h1>
+          <h1 className="md:text-5xl text-4xl font-serif  text-black">
+            Where We Excel
+          </h1>
           <br />
           <p>Excelling in crafting exceptional spaces.</p>
         </div>
