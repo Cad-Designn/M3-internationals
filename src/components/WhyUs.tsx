@@ -45,7 +45,7 @@ export const Whyus = () => {
         {/* QC */}
         <div className="bg-slate-200 h-[225px] rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/QC.jpeg')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] h-[130px] w-[200px]  rounded-md md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
+            className="bg-[#58a4db] h-[130px] w-[200px]  rounded-md md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
             <span className="md:text-[30px] text-[15px] font-bold block">
@@ -60,7 +60,7 @@ export const Whyus = () => {
         {/* SP */}
         <div className="bg-slate-200 h-[225px]  rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/SP.avif')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
+            className="bg-[#58a4db] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
             <span className="md:text-[30px] text-[15px] font-bold block">
@@ -75,7 +75,7 @@ export const Whyus = () => {
         {/* CS */}
         <div className="bg-slate-200 h-[225px]  rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/CS.avif')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
+            className="bg-[#58a4db] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
             <span className="md:text-[30px] text-[15px] font-bold block">
@@ -88,7 +88,7 @@ export const Whyus = () => {
         {/* DE */}
         <div className="bg-slate-200 h-[225px]  rounded-md w-[225px] md:h-[450px] md:w-[450px] bg-cover bg-[url('/DE.jpeg')] flex items-start">
           <motion.div
-            className="bg-[#DB3830] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
+            className="bg-[#58a4db] h-[130px]  rounded-md w-[200px] md:w-[300px] md:h-[200px] text-white md:p-5 p-3"
             variants={revealVariant}
           >
             <span className="md:text-[30px] text-[15px] font-bold block">

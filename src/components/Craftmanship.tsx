@@ -19,7 +19,7 @@ export const Craftsmanship = () => {
 
       {/* First 3 cards in row */}
       <div className="grid grid-cols-1 md:grid-cols-3 px-10 gap-6">
-        <div className="bg-[#474D60] h-[300px] flex flex-col justify-center items-start p-6">
+        <div className="bg-[#182757] rounded-lg h-[300px] flex flex-col justify-center items-start p-6">
           <span className="text-white font-semibold text-[30px]">
             New <br />
             Construction
@@ -28,7 +28,7 @@ export const Craftsmanship = () => {
             Creating new homes with care and expertise.
           </span>
         </div>
-        <div className="bg-[#474D60] h-[300px] flex flex-col justify-center items-start p-6">
+        <div className="bg-[#182757] rounded-lg h-[300px] flex flex-col justify-center items-start p-6">
           <span className="text-white font-semibold text-[30px]">
             Quality <br />
             Renovation
@@ -37,7 +37,7 @@ export const Craftsmanship = () => {
             Revitalizing spaces with dedication.
           </span>
         </div>
-        <div className="bg-[#474D60] h-[300px] flex flex-col justify-center items-start p-6">
+        <div className="bg-[#182757] rounded-lg h-[300px] flex flex-col justify-center items-start p-6">
           <span className="text-white font-semibold text-[30px]">
             Attention <br />
             To Detail

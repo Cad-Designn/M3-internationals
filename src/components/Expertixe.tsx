@@ -85,7 +85,7 @@ export const Expertise = () => {
         {services.slice(0, 3).map((service, index) => (
           <motion.div
             key={index}
-            className="bg-[#474D60] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
+            className="bg-[#182757] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
@@ -94,7 +94,7 @@ export const Expertise = () => {
             whileHover="hover"
           >
             <div
-              className="w-10 h-6 rotate-45 bg-[#DB3830] mb-4
+              className="w-10 h-6 rotate-45 bg-[#58a4db] mb-4
               [clip-path:polygon(25%_0,75%_0,100%_50%,75%_100%,25%_100%,0_50%)]"
             ></div>
             <h3 className="text-xl font-medium mb-2">{service.title}</h3>
@@ -107,7 +107,7 @@ export const Expertise = () => {
           {services.slice(3).map((service, index) => (
             <motion.div
               key={index}
-              className="bg-[#474D60] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
+              className="bg-[#182757] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -116,7 +116,7 @@ export const Expertise = () => {
               whileHover="hover"
             >
               <div
-                className="w-10 h-6 rotate-45 bg-[#DB3830] mb-4
+                className="w-10 h-6 rotate-45 bg-[#58a4db] mb-4
                 [clip-path:polygon(25%_0,75%_0,100%_50%,75%_100%,25%_100%,0_50%)]"
               ></div>
               <h3 className="text-xl font-medium mb-2">{service.title}</h3>
@@ -129,7 +129,7 @@ export const Expertise = () => {
       {/* Section with parallax + CTA */}
       <div className="w-full md:h-[80vh] h-[50vh] mt-[10vh] px-10 flex md:gap-8">
         <motion.div
-          className="bg-red-500 md:px-10 px-5 flex flex-col justify-center w-full md:w-[70%]"
+          className="bg-[#58a4db] rounded-lg md:px-10 px-5 flex flex-col justify-center w-full md:w-[70%]"
           variants={textContainer}
           initial="hidden"
           whileInView="visible"
