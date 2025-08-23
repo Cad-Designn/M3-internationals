@@ -43,7 +43,7 @@ const About: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <ParallaxSection
-        backgroundImage="https://images.pexels.com/photos/442585/pexels-photo-442585.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        backgroundImage="/bg1.jpg"
         className="min-h-96 flex items-center justify-center"
       >
         <div className="text-center text-white px-4 max-w-4xl">

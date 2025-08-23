@@ -10,7 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white text-black overflow-x-hidden">
+      <div className="min-h-screen bg-[#F8F1E7] text-black overflow-x-hidden">
         <ScrollToTop />
         <Navigation />
         <Routes>

@@ -1,70 +1,103 @@
+import { motion } from "framer-motion";
+import { Hammer, Wrench, Ruler } from "lucide-react"; // nice minimal icons
+
 export const Craftsmanship = () => {
+  const cards = [
+    {
+      title: "New Construction",
+      desc: "Creating new homes with care and expertise.",
+      icon: <Hammer className="w-10 h-10 text-sky-400" />,
+    },
+    {
+      title: "Quality Renovation",
+      desc: "Revitalizing spaces with dedication.",
+      icon: <Wrench className="w-10 h-10 text-indigo-400" />,
+    },
+    {
+      title: "Attention To Detail",
+      desc: "Focusing on precision in every project.",
+      icon: <Ruler className="w-10 h-10 text-purple-400" />,
+    },
+  ];
+
   return (
-    <section className="py-24  ">
-      {/* Parallax JCB + Background */}
-
+    <section className="relative py-28 bg-gradient-to-b from-[#020213] via-[#0f172a] to-transparent overflow-hidden">
       {/* Heading */}
-      <div className=" flex md:flex-row flex-col mb-20 px-10 md:gap-44 gap-10 ">
-        <h2 className="md:text-5xl text-4xl  font-serif  text-black md:mb-6 flex">
-          Our <br /> Craftsmanship
+      <motion.div
+        className="mb-20 px-8 text-center"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-5xl md:text-6xl font-serif text-white mb-4">
+          Our Craftsmanship
         </h2>
-        <div className="flex flex-col mb-6">
-          <h1 className="md:text-5xl text-4xl font-serif  text-black">
-            Where We Excel
-          </h1>
-          <br />
-          <p>Excelling in crafting exceptional spaces.</p>
-        </div>
+        <div className="mx-auto w-24 h-[4px] bg-gradient-to-r from-indigo-500 to-sky-400 rounded-full"></div>
+        <p className="mt-6 text-white/80 max-w-2xl mx-auto text-lg">
+          Excelling in crafting exceptional spaces with passion and precision.
+        </p>
+      </motion.div>
+
+      {/* Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-6xl mx-auto">
+        {cards.map((card, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -10, scale: 1.03 }}
+            className="relative bg-white/10 border border-white/10 backdrop-blur-md rounded-2xl p-8 shadow-xl group overflow-hidden"
+          >
+            {/* Glow on hover */}
+            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+            <div className="relative z-10 flex flex-col gap-4">
+              {card.icon}
+              <h3 className="text-2xl font-semibold text-white">
+                {card.title}
+              </h3>
+              <p className="text-gray-300">{card.desc}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
-      {/* First 3 cards in row */}
-      <div className="grid grid-cols-1 md:grid-cols-3 px-10 gap-6">
-        <div className="bg-[#182757] rounded-lg h-[300px] flex flex-col justify-center items-start p-6">
-          <span className="text-white font-semibold text-[30px]">
-            New <br />
-            Construction
-          </span>
-          <span className="text-white/80">
-            Creating new homes with care and expertise.
-          </span>
-        </div>
-        <div className="bg-[#182757] rounded-lg h-[300px] flex flex-col justify-center items-start p-6">
-          <span className="text-white font-semibold text-[30px]">
-            Quality <br />
-            Renovation
-          </span>
-          <span className="text-white/80">
-            Revitalizing spaces with dedication.
-          </span>
-        </div>
-        <div className="bg-[#182757] rounded-lg h-[300px] flex flex-col justify-center items-start p-6">
-          <span className="text-white font-semibold text-[30px]">
-            Attention <br />
-            To Detail
-          </span>
-          <span className="text-white/80">
-            Focusing on precision in every project.
-          </span>
-        </div>
-      </div>
-      <div className="w-full h-[80vh] mt-[10vh] px-10 gap-8 hidden md:flex ">
-        {/* JCB */}
-        <div className="flex flex-col justify-center md:w-[70%] md:h-[80vh]">
-          <img
-            src="/jcb.jpeg"
-            className="md:h-[360px] md:w-[360px] w-[150px] h-[150px] absolute -translate-x-1/2 right-1/4 z-10"
-          />
-        </div>
+      {/* Showcase Section */}
+      <div className="relative mt-32 flex flex-col md:flex-row items-center justify-center gap-12 px-8 max-w-7xl mx-auto">
+        {/* JCB Image */}
+        <motion.img
+          src="/jcb.jpeg"
+          alt="JCB Machinery"
+          className="w-[280px] md:w-[380px] rounded-2xl shadow-2xl relative z-10"
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.05 }}
+        />
 
-        {/* WoodCarpend Background */}
-        <div className="relative md:w-[70%]  md:h-[80vh] w-full h-[300px] overflow-hidden">
+        {/* Wood Background */}
+        <div className="relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
           <div
-            className="absolute inset-0 w-full bg-black bg-[url('/woodCarpend.jpeg')] bg-right bg-no-repeat md:bg-[length:80%] bg-[length:150%]"
-            style={{
-              backgroundAttachment: "fixed",
-              clipPath: "inset(0 0% 0% 0)",
-            }}
+            className="absolute inset-0 bg-[url('/woodCarpend.jpeg')] bg-cover bg-center"
+            style={{ backgroundAttachment: "fixed" }}
           ></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent"></div>
+
+          {/* Floating Badge */}
+          <motion.div
+            className="absolute bottom-6 left-6 bg-white/20 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10 shadow-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg font-semibold text-white">10+ Years</p>
+            <p className="text-sm text-gray-200">Of Building Excellence</p>
+          </motion.div>
         </div>
       </div>
     </section>

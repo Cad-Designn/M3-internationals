@@ -7,34 +7,34 @@ export const Expertise = () => {
       description:
         "Bespoke construction tailored to your unique vision and requirements.",
       image:
-        "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1600",
     },
     {
       title: "New Builds",
       description:
         "Modern homes and commercial spaces built with precision and style.",
       image:
-        "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1600",
     },
     {
       title: "Restorations",
       description: "Breathe new life into historic and classic structures.",
       image:
-        "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1600",
     },
     {
       title: "Quality Materials",
       description: "Using the finest resources for lasting results.",
-      image: "",
+      image: "/Business.jpg",
     },
     {
       title: "Meticulous Attention",
       description: "Ensuring perfection in every aspect.",
-      image: "",
+      image:
+        "https://images.pexels.com/photos/7031600/pexels-photo-7031600.jpeg?auto=compress&cs=tinysrgb&w=1600",
     },
   ];
 
-  // Animation variants for cards
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
@@ -42,72 +42,37 @@ export const Expertise = () => {
       y: 0,
       transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
     }),
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-  };
-  const textItem: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-  const textContainer: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.25 }, // delay between each child
-    },
+    hover: { scale: 1.08, transition: { duration: 0.3 } },
   };
 
   return (
-    <section className="py-24">
+    <section className="relative py-28 bg-gradient-to-b from-[#959ba7] to-[#020213]  overflow-hidden">
       {/* Heading */}
       <motion.div
-        className="mb-20 px-10"
+        className="mb-20 px-6 text-center relative z-10"
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-5xl md:text-6xl font-serif font-bold text-black mb-6">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
           Our Expertise
         </h2>
-        <div className="w-24 h-[2px] bg-black mb-6"></div>
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl ">
+        <div className="mx-auto w-24 h-[4px] bg-gradient-to-r from-indigo-500 to-sky-400 mb-6 rounded-full"></div>
+        <p className="text-gray-300 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
           From concept to completion, we deliver exceptional construction
           solutions that exceed expectations and stand the test of time.
         </p>
       </motion.div>
 
-      {/* First 3 cards */}
-      <div className="grid md:grid-cols-3 mx-10 gap-6">
-        {services.slice(0, 3).map((service, index) => (
-          <motion.div
-            key={index}
-            className="bg-[#182757] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={index}
-            whileHover="hover"
-          >
-            <div
-              className="w-10 h-6 rotate-45 bg-[#58a4db] mb-4
-              [clip-path:polygon(25%_0,75%_0,100%_50%,75%_100%,25%_100%,0_50%)]"
-            ></div>
-            <h3 className="text-xl font-medium mb-2">{service.title}</h3>
-            <p className="text-white/80">{service.description}</p>
-          </motion.div>
-        ))}
-
-        {/* Bottom row */}
-        <div className="md:col-span-3 grid md:grid-cols-2 gap-6">
-          {services.slice(3).map((service, index) => (
+      {/* Premium Services Carousel */}
+      {/* Premium Services Infinite Carousel */}
+      <div className="relative w-full overflow-hidden">
+        <div className="flex gap-6 animate-scroll w-max px-8">
+          {[...services, ...services].map((service, index) => (
             <motion.div
               key={index}
-              className="bg-[#182757] text-white p-8 flex flex-col items-start rounded-2xl shadow-lg"
+              className="min-w-[280px] md:min-w-[340px] lg:min-w-[380px] relative group rounded-2xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-lg border border-white/10"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -115,66 +80,78 @@ export const Expertise = () => {
               custom={index}
               whileHover="hover"
             >
+              {/* Background Image */}
               <div
-                className="w-10 h-6 rotate-45 bg-[#58a4db] mb-4
-                [clip-path:polygon(25%_0,75%_0,100%_50%,75%_100%,25%_100%,0_50%)]"
-              ></div>
-              <h3 className="text-xl font-medium mb-2">{service.title}</h3>
-              <p className="text-white/80">{service.description}</p>
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{ backgroundImage: `url(${service.image})` }}
+              >
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 p-8 flex flex-col justify-end h-80">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-200 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
+
+        {/* gradient masks for fade edges */}
       </div>
 
-      {/* Section with parallax + CTA */}
-      <div className="w-full md:h-[80vh] h-[50vh] mt-[10vh] px-10 flex md:gap-8">
+      {/* Premium CTA Section */}
+      <div className="mt-32 relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+        {/* Left Content */}
         <motion.div
-          className="bg-[#58a4db] rounded-lg md:px-10 px-5 flex flex-col justify-center w-full md:w-[70%]"
-          variants={textContainer}
-          initial="hidden"
-          whileInView="visible"
+          className="flex flex-col gap-6 relative z-10"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
-          <motion.p className="text-white text-lg" variants={textItem}>
+          <p className="text-sky-400 uppercase font-medium tracking-wide">
             Building Excellence
-          </motion.p>
-
-          <motion.h1
-            className="text-white font-extrabold md:w-[70%] md:text-[58px] text-[20px] leading-tight"
-            variants={textItem}
-          >
-            Serving Clients in the Region
-          </motion.h1>
-
-          <motion.button
-            className="mt-6 w-fit  bg-white text-black/70 font-medium px-3 md:px-6 md:py-3 rounded-md hover:bg-gray-200 transition"
-            variants={textItem}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact
-          </motion.button>
+          </p>
+          <h1 className="text-white font-extrabold text-4xl md:text-6xl leading-tight">
+            Serving Clients Across the Region
+          </h1>
+          <p className="text-white/60 md:text-lg leading-relaxed max-w-lg">
+            Trusted by industry leaders and homeowners alike, we pride ourselves
+            on delivering unmatched quality and craftsmanship in every project.
+          </p>
+          <button className="mt-4 w-fit bg-gradient-to-r from-indigo-500 to-sky-400 text-white font-medium px-8 py-4 rounded-xl hover:opacity-90 transition">
+            Contact Us
+          </button>
         </motion.div>
 
-        {/* Parallax Window (fade only) */}
+        {/* Right Image Showcase */}
         <motion.div
-          className="relative   w-[30%] h-full overflow-hidden"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          className="relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          <div
-            className="absolute bg-cover inset-0 w-full bg-black bg-[url('/overlay.jpeg')] bg-no-repeat"
-            style={{
-              backgroundAttachment: "fixed",
-              clipPath: "inset(0 0% 0% 0)",
-            }}
-          >
-            <div className="w-full h-full bg-black/40"></div>
+          <img
+            src="/S&C.jpg"
+            alt="construction"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent"></div>
+
+          {/* Floating Badge */}
+          <div className="absolute bottom-6 left-6 bg-white/20 backdrop-blur-md rounded-xl px-6 py-3 text-white shadow-lg border border-white/10">
+            <p className="font-semibold text-lg">+200 Happy Clients</p>
+            <p className="text-sm text-gray-200">Across multiple regions</p>
           </div>
         </motion.div>
       </div>
+      <div className="absolute bottom-[2px] left-1/2 transform -translate-x-1/2 w-[90%] h-[1px]  bg-gradient-to-r from-transparent via-white to-transparent  " />
     </section>
   );
 };
