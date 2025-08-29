@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Hammer, Wrench, Ruler } from "lucide-react"; // nice minimal icons
+import ReviewsSection from "./ReviewsSection";
 
 export const Craftsmanship = () => {
   const cards = [
@@ -67,11 +68,10 @@ export const Craftsmanship = () => {
 
       {/* Showcase Section */}
       <div className="relative mt-32 flex flex-col md:flex-row items-center justify-center gap-12 px-8 max-w-7xl mx-auto">
-        {/* JCB Image */}
         <motion.img
-          src="/jcb.jpeg"
-          alt="JCB Machinery"
-          className="w-[280px] md:w-[380px] rounded-2xl shadow-2xl relative z-10"
+          src="/assets/church2.jpeg"
+          alt="award"
+          className="w-[280px] md:w-[380px] md:h-[500px]  rounded-2xl shadow-2xl relative z-10"
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -82,7 +82,7 @@ export const Craftsmanship = () => {
         {/* Wood Background */}
         <div className="relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
           <div
-            className="absolute inset-0 bg-[url('/woodCarpend.jpeg')] bg-cover bg-center"
+            className="absolute inset-0 bg-[url('/assets/church.jpeg')] bg-cover bg-center"
             style={{ backgroundAttachment: "fixed" }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent"></div>
@@ -100,6 +100,7 @@ export const Craftsmanship = () => {
           </motion.div>
         </div>
       </div>
+      <ReviewsSection />
     </section>
   );
 };

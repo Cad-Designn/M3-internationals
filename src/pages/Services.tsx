@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Building, Home, Wrench, Zap, Palette, Shield } from "lucide-react";
+import { Building, Home, Wrench, Shield } from "lucide-react";
 import ParallaxSection from "../components/ParallaxSection";
 import Footer from "../components/Footer";
 
@@ -15,8 +15,7 @@ const Services: React.FC = () => {
         "Custom liturgical design reflecting spiritual themes",
         "Integration of acoustic, lighting, and ventilation suited for worship",
       ],
-      image:
-        "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/assets/church.jpeg",
     },
     {
       icon: Home,
@@ -28,8 +27,7 @@ const Services: React.FC = () => {
         "Restoration of old masonry, roofs, steeples, and domes",
         "Conservation of artwork and stained glass",
       ],
-      image:
-        "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/assets/resto.jpeg",
     },
     {
       icon: Wrench,
@@ -37,29 +35,28 @@ const Services: React.FC = () => {
       description:
         "Residential, commercial, and institutional projects — executed with engineering precision, safety, and project transparency.",
       features: ["End-to-end structural & civil works"],
-      image:
-        "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/assets/construction.jpeg",
     },
-    {
-      icon: Zap,
-      title: "INTERIOR DESIGN & FIT-OUT",
-      description:
-        "From conceptual design to turnkey interiors, we deliver customized and cohesive spaces.",
-      features: ["Functional + aesthetic clarity", "Custom fit-outs"],
-      image:
-        "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      icon: Palette,
-      title: "SURVEYING & ESTIMATION",
-      description: "Land and topographic surveys using modern tools.",
-      features: [
-        "Accurate project cost estimation",
-        "Quantity surveying and BOQ preparation",
-      ],
-      image:
-        "https://images.pexels.com/photos/3964736/pexels-photo-3964736.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
+    // {
+    //   icon: Zap,
+    //   title: "INTERIOR DESIGN & FIT-OUT",
+    //   description:
+    //     "From conceptual design to turnkey interiors, we deliver customized and cohesive spaces.",
+    //   features: ["Functional + aesthetic clarity", "Custom fit-outs"],
+    //   image:
+    //     "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=800",
+    // },
+    // {
+    //   icon: Palette,
+    //   title: "SURVEYING & ESTIMATION",
+    //   description: "Land and topographic surveys using modern tools.",
+    //   features: [
+    //     "Accurate project cost estimation",
+    //     "Quantity surveying and BOQ preparation",
+    //   ],
+    //   image:
+    //     "https://images.pexels.com/photos/3964736/pexels-photo-3964736.jpeg?auto=compress&cs=tinysrgb&w=800",
+    // },
     {
       icon: Shield,
       title: "PROJECT MANAGEMENT CONSULTANCY",
@@ -140,7 +137,7 @@ const Services: React.FC = () => {
             What We Offer
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-10">
             {services.map((service, index) => (
               <motion.div
                 key={index}

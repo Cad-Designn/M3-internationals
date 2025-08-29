@@ -28,15 +28,15 @@ const Navigation: React.FC = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-black " : "bg-black/50 "
+        isScrolled ? "bg-black/50 backdrop-blur-md " : "bg-black/50 "
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="  sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="text-white flex items-center">
             <motion.div whileHover={{ scale: 1.05 }} className="font-serif">
-              <img src="/logo.png" alt="Logo" className="h-[80px] w-[80px]" />
+              <img src="/logo.png" alt="Logo" width={120} />
             </motion.div>
           </Link>
 
@@ -46,8 +46,8 @@ const Navigation: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative text-white hover:text-gray-300 transition-colors duration-300 ${
-                  location.pathname === item.path ? "text-yellow-500" : ""
+                className={`relative text-white hover:text-blue-600 transition-colors duration-300 ${
+                  location.pathname === item.path ? "text-blue-600" : ""
                 }`}
               >
                 <motion.span whileHover={{ y: -2 }} className="inline-block">
@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-500"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600"
                     initial={false}
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />

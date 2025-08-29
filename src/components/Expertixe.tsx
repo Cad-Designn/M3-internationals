@@ -6,21 +6,18 @@ export const Expertise = () => {
       title: "Custom Builds",
       description:
         "Bespoke construction tailored to your unique vision and requirements.",
-      image:
-        "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image: "/assets/design.jpeg",
     },
     {
       title: "New Builds",
       description:
         "Modern homes and commercial spaces built with precision and style.",
-      image:
-        "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image: "/assets/construction.jpeg",
     },
     {
       title: "Restorations",
       description: "Breathe new life into historic and classic structures.",
-      image:
-        "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image: "/assets/resto.jpeg",
     },
     {
       title: "Quality Materials",
@@ -30,8 +27,7 @@ export const Expertise = () => {
     {
       title: "Meticulous Attention",
       description: "Ensuring perfection in every aspect.",
-      image:
-        "https://images.pexels.com/photos/7031600/pexels-photo-7031600.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image: "/assets/church3.jpeg",
     },
   ];
 

@@ -42,29 +42,25 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <ParallaxSection
-        backgroundImage="/bg1.jpg"
-        className="min-h-96 flex items-center justify-center"
-      >
-        <div className="text-center text-white px-4 max-w-4xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-serif font-bold mb-6"
-          >
-            About Us
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="text-xl text-gray-200 leading-relaxed"
-          >
-            Building dreams with precision, passion, and unparalleled expertise
-          </motion.p>
-        </div>
-      </ParallaxSection>
+
+      <div className="text-center bg-white text-black px-4 h-[40vh] pt-[20vh] flex items-center justify-center flex-col">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-5xl md:text-7xl font-serif font-bold mb-6"
+        >
+          About Us
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="text-xl text-black/40 leading-relaxed"
+        >
+          Building dreams with precision, passion, and unparalleled expertise
+        </motion.p>
+      </div>
 
       {/* Story Section */}
       <section className="py-24 bg-white">
@@ -106,11 +102,11 @@ const About: React.FC = () => {
               viewport={{ once: true }}
             >
               <div className="overflow-hidden rounded-sm">
-                {/* <img
-                  src="https://images.pexels.com/photos/3964736/pexels-photo-3964736.jpeg?auto=compress&cs=tinysrgb&w=800"
+                <img
+                  src="/assets/award1.jpeg"
                   alt="Our Story"
-                  className="w-full h-96 object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
-                /> */}
+                  className="w-full h-96 object-cover  "
+                />
               </div>
             </motion.div>
           </div>
@@ -163,7 +159,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 bg-black text-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -188,17 +184,17 @@ const About: React.FC = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-5xl md:text-6xl font-serif font-bold text-yellow-500 mb-4">
+                <div className="text-5xl md:text-6xl font-serif font-bold text-black mb-4">
                   {stat.number}
                 </div>
-                <p className="text-gray-300 text-lg">{stat.label}</p>
+                <p className="text-black/20 text-lg">{stat.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Image Section */}
+      {/* Team Image Section
       <ParallaxSection
         backgroundImage="https://images.pexels.com/photos/159235/architecture-building-construction-work-159235.jpeg?auto=compress&cs=tinysrgb&w=1600"
         className="py-32"
@@ -224,7 +220,7 @@ const About: React.FC = () => {
             together to bring your vision to life with precision and passion.
           </motion.p>
         </div>
-      </ParallaxSection>
+        </ParallaxSection> */}
 
       <Footer />
     </div>

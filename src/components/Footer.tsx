@@ -21,8 +21,8 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-[#020213]/20 text-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-gray-300 leading-relaxed"
+              className="leading-relaxed text-gray-600"
             >
               To be a trusted partner in building spaces that uplift lives —
               from sacred sanctuaries to functional structures — guided by
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             >
               Contact Information
             </motion.h4>
-            <div className="space-y-4">
+            <div className="space-y-4 text-gray-600">
               {[
                 { icon: Phone, text: "+91 83018 44445" },
                 { icon: Mail, text: "m3international41@gmail.com" },
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center space-x-3 text-gray-300"
+                  className="flex items-center space-x-3 "
                 >
                   <item.icon size={18} />
                   <span>{item.text}</span>
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-700 transition-colors duration-300"
+                  className="w-10 h-10  rounded-full flex items-center justify-center  hover:bg-gray-700 transition-colors duration-300"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400"
+          className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-600"
         >
           <p>&copy; 2025 M3 International. All rights reserved.</p>
         </motion.div>
