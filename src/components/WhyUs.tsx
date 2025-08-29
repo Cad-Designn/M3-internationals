@@ -61,7 +61,7 @@ export const Whyus = () => {
 
       {/* Cards */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 max-w-6xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-20 px-6 mx-auto"
         variants={containerVariant}
         initial="hidden"
         whileInView="visible"
@@ -92,7 +92,6 @@ export const Whyus = () => {
             </div>
 
             {/* Glow hover effect */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-tr from-sky-500/20 to-indigo-500/20 z-30" />
           </motion.div>
         ))}
       </motion.div>

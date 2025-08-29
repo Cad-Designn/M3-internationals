@@ -8,7 +8,7 @@ import { Whyus } from "../components/WhyUs";
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#F8F1E7] overflow-x-hidden">
+    <div className="min-h-screen  overflow-x-hidden">
       {/* Hero Section with Parallax */}
 
       <Hero />

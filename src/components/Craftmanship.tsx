@@ -22,7 +22,7 @@ export const Craftsmanship = () => {
   ];
 
   return (
-    <section className="relative py-28 bg-gradient-to-b from-[#020213] via-[#0f172a] to-transparent overflow-hidden">
+    <section className="relative py-28  overflow-hidden">
       {/* Heading */}
       <motion.div
         className="mb-20 px-8 text-center"
@@ -31,11 +31,11 @@ export const Craftsmanship = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl md:text-6xl font-serif text-white mb-4">
+        <h2 className="text-5xl md:text-6xl font-serif text-black mb-4">
           Our Craftsmanship
         </h2>
         <div className="mx-auto w-24 h-[4px] bg-gradient-to-r from-indigo-500 to-sky-400 rounded-full"></div>
-        <p className="mt-6 text-white/80 max-w-2xl mx-auto text-lg">
+        <p className="mt-6 text-black/80 max-w-2xl mx-auto text-lg">
           Excelling in crafting exceptional spaces with passion and precision.
         </p>
       </motion.div>
@@ -57,7 +57,7 @@ export const Craftsmanship = () => {
 
             <div className="relative z-10 flex flex-col gap-4">
               {card.icon}
-              <h3 className="text-2xl font-semibold text-white">
+              <h3 className="text-2xl font-semibold text-black">
                 {card.title}
               </h3>
               <p className="text-gray-300">{card.desc}</p>
@@ -67,7 +67,7 @@ export const Craftsmanship = () => {
       </div>
 
       {/* Showcase Section */}
-      <div className="relative mt-32 flex flex-col md:flex-row items-center justify-center gap-12 px-8 max-w-7xl mx-auto">
+      {/* <div className="relative mt-32 flex flex-col md:flex-row items-center justify-center gap-12 px-8 max-w-7xl mx-auto">
         <motion.img
           src="/assets/church2.jpeg"
           alt="award"
@@ -77,18 +77,18 @@ export const Craftsmanship = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
-        />
+        /> */}
 
-        {/* Wood Background */}
-        <div className="relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+      {/* Wood Background */}
+      {/* <div className="relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
           <div
             className="absolute inset-0 bg-[url('/assets/church.jpeg')] bg-cover bg-center"
             style={{ backgroundAttachment: "fixed" }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent"></div> */}
 
-          {/* Floating Badge */}
-          <motion.div
+      {/* Floating Badge */}
+      {/* <motion.div
             className="absolute bottom-6 left-6 bg-white/20 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10 shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ export const Craftsmanship = () => {
             <p className="text-sm text-gray-200">Of Building Excellence</p>
           </motion.div>
         </div>
-      </div>
+      </div> */}
       <ReviewsSection />
     </section>
   );

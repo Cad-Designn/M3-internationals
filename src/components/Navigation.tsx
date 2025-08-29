@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white"
+            className="md:hidden text-white mr-8"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

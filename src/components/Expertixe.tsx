@@ -1,4 +1,4 @@
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const Expertise = () => {
   const services = [
@@ -31,18 +31,8 @@ export const Expertise = () => {
     },
   ];
 
-  const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
-    }),
-    hover: { scale: 1.08, transition: { duration: 0.3 } },
-  };
-
   return (
-    <section className="relative py-28 bg-gradient-to-b from-[#959ba7] to-[#020213]  overflow-hidden">
+    <section className="relative py-28    overflow-hidden">
       {/* Heading */}
       <motion.div
         className="mb-20 px-6 text-center relative z-10"
@@ -51,7 +41,7 @@ export const Expertise = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-black mb-4 tracking-tight">
           Our Expertise
         </h2>
         <div className="mx-auto w-24 h-[4px] bg-gradient-to-r from-indigo-500 to-sky-400 mb-6 rounded-full"></div>
@@ -69,7 +59,6 @@ export const Expertise = () => {
             <motion.div
               key={index}
               className="min-w-[280px] md:min-w-[340px] lg:min-w-[380px] relative group rounded-2xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-lg border border-white/10"
-              variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -113,10 +102,10 @@ export const Expertise = () => {
           <p className="text-sky-400 uppercase font-medium tracking-wide">
             Building Excellence
           </p>
-          <h1 className="text-white font-extrabold text-4xl md:text-6xl leading-tight">
+          <h1 className="text-black font-extrabold text-4xl md:text-6xl leading-tight">
             Serving Clients Across the Region
           </h1>
-          <p className="text-white/60 md:text-lg leading-relaxed max-w-lg">
+          <p className="text-black/60 md:text-lg leading-relaxed max-w-lg">
             Trusted by industry leaders and homeowners alike, we pride ourselves
             on delivering unmatched quality and craftsmanship in every project.
           </p>
@@ -147,7 +136,7 @@ export const Expertise = () => {
           </div>
         </motion.div>
       </div>
-      <div className="absolute bottom-[2px] left-1/2 transform -translate-x-1/2 w-[90%] h-[1px]  bg-gradient-to-r from-transparent via-white to-transparent  " />
+      <div className="absolute bottom-[2px] left-1/2 transform -translate-x-1/2 w-[90%] h-[1px]  bg-gradient-to-r from-transparent via-black to-transparent  " />
     </section>
   );
 };
