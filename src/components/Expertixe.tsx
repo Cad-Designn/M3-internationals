@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export const Expertise = () => {
   const services = [
@@ -31,6 +31,16 @@ export const Expertise = () => {
     },
   ];
 
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    }),
+    hover: { scale: 1.08, transition: { duration: 0.3 } },
+  };
+
   return (
     <section className="relative py-28    overflow-hidden">
       {/* Heading */}
@@ -59,6 +69,7 @@ export const Expertise = () => {
             <motion.div
               key={index}
               className="min-w-[280px] md:min-w-[340px] lg:min-w-[380px] relative group rounded-2xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-lg border border-white/10"
+              variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
