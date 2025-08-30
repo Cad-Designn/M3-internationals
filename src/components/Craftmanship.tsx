@@ -22,7 +22,7 @@ export const Craftsmanship = () => {
   ];
 
   return (
-    <section className="relative py-28  overflow-hidden">
+    <section className="relative pt-28  overflow-hidden">
       {/* Heading */}
       <motion.div
         className="mb-20 px-8 text-center"
@@ -60,7 +60,7 @@ export const Craftsmanship = () => {
               <h3 className="text-2xl font-semibold text-black">
                 {card.title}
               </h3>
-              <p className="text-gray-300">{card.desc}</p>
+              <p className="text-gray-600">{card.desc}</p>
             </div>
           </motion.div>
         ))}

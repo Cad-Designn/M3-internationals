@@ -113,9 +113,36 @@ const Footer: React.FC = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-600"
+          className="mt-12 pt-8 justify-evenly border-t border-gray-800 text-center flex  text-gray-600"
         >
-          <p>&copy; 2025 M3 International. All rights reserved.</p>
+          <p className="flex">
+            &copy; 2025 M3 International. All rights reserved.
+          </p>
+          <p className="flex gap-2 justify-center items-center ">
+            <span>Made with</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="12"
+              viewBox="0 0 14 12"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.82587 1.81074C2.43755 1.19924 3.26705 0.85572 4.13197 0.85572C4.99689 0.85572 5.82639 1.19924 6.43807 1.81074L7.39379 2.76563L8.3495 1.81074C8.65039 1.4992 9.01031 1.25071 9.40827 1.07976C9.80622 0.908809 10.2342 0.818828 10.6673 0.815065C11.1004 0.811301 11.53 0.893831 11.9308 1.05784C12.3317 1.22184 12.6959 1.46404 13.0021 1.77031C13.3084 2.07657 13.5506 2.44075 13.7146 2.84162C13.8786 3.24248 13.9611 3.672 13.9574 4.1051C13.9536 4.5382 13.8636 4.96622 13.6927 5.36417C13.5217 5.76213 13.2732 6.12205 12.9617 6.42294L7.39379 11.9917L1.82587 6.42294C1.21437 5.81126 0.87085 4.98176 0.87085 4.11684C0.87085 3.25192 1.21437 2.42242 1.82587 1.81074Z"
+                fill="#FF4048"
+              ></path>
+            </svg>
+            <span>| by</span>
+            <a
+              className="font-bold"
+              target="_blank"
+              href="https://ig.me/m/cad__designs/"
+            >
+              Cad Design
+            </a>
+          </p>
         </motion.div>
       </div>
     </footer>

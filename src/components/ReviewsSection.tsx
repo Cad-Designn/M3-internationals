@@ -19,7 +19,7 @@ const reviews: Review[] = [
 
 const ReviewsSection: React.FC = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center overflow-hidden py-20">
+    <div className="relative flex flex-col items-center justify-center pt-18 overflow-hidden">
       {/* First Row */}
       <Marquee pauseOnHover speed={40} gradient={false}>
         {reviews.map((item, idx) => (

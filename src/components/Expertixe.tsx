@@ -55,7 +55,7 @@ export const Expertise = () => {
           Our Expertise
         </h2>
         <div className="mx-auto w-24 h-[4px] bg-gradient-to-r from-indigo-500 to-sky-400 mb-6 rounded-full"></div>
-        <p className="text-gray-300 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
           From concept to completion, we deliver exceptional construction
           solutions that exceed expectations and stand the test of time.
         </p>
@@ -64,7 +64,7 @@ export const Expertise = () => {
       {/* Premium Services Carousel */}
       {/* Premium Services Infinite Carousel */}
       <div className="relative w-full overflow-hidden">
-        <div className="flex gap-6 animate-scroll w-max px-8">
+        <div className="flex gap-6 w-max animate-scrollX">
           {[...services, ...services].map((service, index) => (
             <motion.div
               key={index}
@@ -89,15 +89,13 @@ export const Expertise = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-200 text-sm leading-relaxed">
+                <p className="text-gray-100 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* gradient masks for fade edges */}
       </div>
 
       {/* Premium CTA Section */}

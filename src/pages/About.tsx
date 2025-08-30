@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Users, Target, Heart } from "lucide-react";
-import ParallaxSection from "../components/ParallaxSection";
+
 import Footer from "../components/Footer";
 
 const About: React.FC = () => {
@@ -43,7 +43,7 @@ const About: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
 
-      <div className="text-center bg-white text-black px-4 h-[40vh] pt-[20vh] flex items-center justify-center flex-col">
+      <div className="text-center  text-black px-4 h-[40vh] pt-[20vh] flex items-center justify-center flex-col">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ const About: React.FC = () => {
       </div>
 
       {/* Story Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -114,7 +114,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -141,7 +141,7 @@ const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-white rounded-sm shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="text-center p-8  rounded-sm shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                   <value.icon size={32} className="text-white" />
@@ -159,7 +159,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

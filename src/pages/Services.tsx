@@ -125,7 +125,7 @@ const Services: React.FC = () => {
       </ParallaxSection>
 
       {/* Services Grid */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ const Services: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ scale: 1.01 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group"
+                className="bg-white/10 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group"
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
@@ -182,7 +182,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-24  relative">
         <div className="max-w-5xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
