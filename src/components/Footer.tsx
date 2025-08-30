@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 pt-8 justify-evenly border-t border-gray-800 text-center flex  text-gray-600"
+          className="mt-12 pt-8 md:justify-evenly border-t border-gray-800 flex text-center flex-col md:flex-row  justify-evenly items-center"
         >
           <p className="flex">
             &copy; 2025 M3 International. All rights reserved.
