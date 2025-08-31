@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="text-2xl font-serif font-bold mb-6"
             >
-              M3 Internationals
+              M3 International
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
