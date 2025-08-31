@@ -33,7 +33,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
         >
-          M3 INTERNATIONALS
+          M3 INTERNATIONAL
         </motion.h1>
 
         {/* Subtitle (fade + slide-up with delay) */}
