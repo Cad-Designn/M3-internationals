@@ -1,23 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Phone,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer: React.FC = () => {
   const socialIcons = [
-    { icon: Facebook, href: "#", label: "Facebook" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/share/16dXi2qzus/",
+      label: "Facebook",
+    },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/builder_m3/",
+      href: "https://www.instagram.com/m3_international?utm_source=qr&igsh=ZmgyamZvaXFleTZl",
       label: "Instagram",
     },
-    { icon: Twitter, href: "#", label: "Twitter" },
   ];
 
   return (
@@ -56,13 +52,23 @@ const Footer: React.FC = () => {
             >
               Contact Information
             </motion.h4>
+
             <div className="space-y-4 text-gray-600">
               {[
-                { icon: Phone, text: "+91 83018 44445" },
-                { icon: Mail, text: "m3international41@gmail.com" },
+                {
+                  icon: Phone,
+                  text: "+91 83018 44445",
+                  link: "tel:+918301844445",
+                },
+                {
+                  icon: Mail,
+                  text: "m3international41@gmail.com",
+                  link: "mailto:m3international41@gmail.com",
+                },
                 {
                   icon: MapPin,
                   text: "M3 International Private Limited Vadacodu kura p.o",
+                  link: null, // keep plain text for address
                 },
               ].map((item, index) => (
                 <motion.div
@@ -70,10 +76,19 @@ const Footer: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center space-x-3 "
+                  className="flex items-center space-x-3"
                 >
                   <item.icon size={18} />
-                  <span>{item.text}</span>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      className="hover:underline hover:text-white/50 transition-colors"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <span>{item.text}</span>
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -98,7 +113,7 @@ const Footer: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-10 h-10  rounded-full flex items-center justify-center  hover:bg-gray-700 transition-colors duration-300"
+                  className="w-10 h-10  rounded-full flex items-center justify-center bg-gray-500 hover:bg-gray-700 transition-colors duration-300"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />

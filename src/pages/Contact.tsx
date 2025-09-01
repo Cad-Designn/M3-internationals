@@ -1,40 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import ParallaxSection from "../components/ParallaxSection";
 import Footer from "../components/Footer";
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleInputChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission here
+  //   console.log("Form submitted:", formData);
+  //   // Reset form
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     subject: "",
+  //     message: "",
+  //   });
+  // };
 
   const contactInfo = [
     {
@@ -46,11 +46,6 @@ const Contact: React.FC = () => {
       icon: Mail,
       title: "Email",
       details: ["m3international41@gmail.com"],
-    },
-    {
-      icon: MapPin,
-      title: "Address",
-      details: ["M3 International Private Limited Vadacodu kura p.o"],
     },
   ];
 
@@ -137,7 +132,7 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <form
+              {/* <form
                 onSubmit={handleSubmit}
                 className="bg-gray-50 p-8 rounded-sm"
               >
@@ -252,51 +247,53 @@ const Contact: React.FC = () => {
                     className="ml-2 group-hover:translate-x-1 transition-transform duration-300"
                   />
                 </motion.button>
-              </form>
+              </form> */}
+              <section className="">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-12"
+                  >
+                    <h2 className="text-4xl font-serif font-bold text-black mb-6">
+                      Visit Our Office
+                    </h2>
+                    <div className="w-16 h-1 bg-black mx-auto mb-6"></div>
+                    <p className="text-lg text-gray-600">
+                      Stop by our showroom to see our work up close and discuss
+                      your project in person.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="rounded-sm overflow-hidden shadow-lg"
+                  >
+                    <div className="w-full h-96 bg-gray-300 flex items-center justify-center">
+                      <div className="w-full h-full">
+                        <iframe
+                          src="https://www.google.com/maps?q=2Q4R%2BJFG%2C%20Padinjaretheruve%2C%20Kottarakkara%2C%20Kerala%20691531%2C%20India&output=embed"
+                          className="w-full h-full rounded-lg shadow-md border-2 border-gray-300"
+                          allowFullScreen
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </section>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Map Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-serif font-bold text-black mb-6">
-              Visit Our Office
-            </h2>
-            <div className="w-16 h-1 bg-black mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600">
-              Stop by our showroom to see our work up close and discuss your
-              project in person.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="rounded-sm overflow-hidden shadow-lg"
-          >
-            <div className="w-full h-96 bg-gray-300 flex items-center justify-center filter grayscale">
-              <div className="text-center text-gray-600">
-                <MapPin size={48} className="mx-auto mb-4" />
-                <p className="text-lg">Interactive Map</p>
-                <p className="text-sm">
-                  M3 International Private Limited Vadacodu kura p.o
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       <Footer />
     </div>
