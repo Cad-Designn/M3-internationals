@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import ParallaxSection from "../components/ParallaxSection";
 import Footer from "../components/Footer";
 
@@ -46,6 +46,13 @@ const Contact: React.FC = () => {
       icon: Mail,
       title: "Email",
       details: ["m3international41@gmail.com"],
+    },
+    {
+      icon: MapPin,
+      title: "Location",
+      details: [
+        "2Q4R+JFG, Padinjaretheruve, Kottarakkara, Kerala 691531, India",
+      ],
     },
   ];
 
