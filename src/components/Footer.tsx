@@ -67,8 +67,8 @@ const Footer: React.FC = () => {
                 },
                 {
                   icon: MapPin,
-                  text: "M3 International Private Limited Vadacodu kura p.o",
-                  link: null, // keep plain text for address
+                  text: "2Q4R+JFG, Padinjaretheruve, Kottarakkara, Kerala 691531, India",
+                  link: "https://www.google.com/maps/place/2Q4R%2BJFG,+Padinjaretheruve,+Kottarakkara,+Kerala+691531,+India/@9.006563,76.791203,16z/data=!4m5!3m4!1s0x3b060b10c244a5dd:0x73608ff771b27825!8m2!3d9.0065625!4d76.7912031?hl=en-GB&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D", // keep plain text for address
                 },
               ].map((item, index) => (
                 <motion.div
