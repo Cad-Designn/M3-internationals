@@ -12,7 +12,7 @@ export const Hero = () => {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
 
       {/* Text container */}
       <div className="relative w-full px-4 sm:px-6 md:px-12 text-center">
