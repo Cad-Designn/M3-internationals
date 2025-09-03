@@ -28,12 +28,20 @@ export const Hero = () => {
 
         {/* Title (fade + slide-up) */}
         <motion.h1
-          className="md:text-7xl text-[#107CC6] text-2xl font-extrabold"
+          className="md:text-7xl text-[#107CC6] text-2xl  font-extrabold"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
         >
           M3 INTERNATIONAL
+        </motion.h1>
+        <motion.h1
+          className="md:text-4xl text-[#107CC6] text-xl  font-extrabold"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
+        >
+          PRIVATE LIMITED
         </motion.h1>
 
         {/* Subtitle (fade + slide-up with delay) */}
