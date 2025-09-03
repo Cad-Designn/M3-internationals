@@ -18,8 +18,8 @@ export const Hero = () => {
       <div className="relative w-full px-4 sm:px-6 md:px-12 text-center">
         {/* Logo (fade only) */}
         <motion.img
-          src="/logo_black.png"
-          className="absolute -top-20 right-1/2 transform translate-x-1/2 -translate-y-1/2"
+          src="/m3BlueLogo.png"
+          className="absolute w-[150px] md:w-[200px] -top-20 right-1/2 transform translate-x-1/2 -translate-y-1/2"
           alt=""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -28,7 +28,7 @@ export const Hero = () => {
 
         {/* Title (fade + slide-up) */}
         <motion.h1
-          className="md:text-7xl text-3xl font-extrabold"
+          className="md:text-7xl text-[#107CC6] text-2xl font-extrabold"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
@@ -38,12 +38,12 @@ export const Hero = () => {
 
         {/* Subtitle (fade + slide-up with delay) */}
         <motion.p
-          className="md:text-2xl text-black/70 text-2xl"
+          className="md:text-2xl text-black/70 text-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
         >
-          Constructing Excellence, Delivering Trust.
+          The Ones Who Build Tomorrow
         </motion.p>
       </div>
     </div>
