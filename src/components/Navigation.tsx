@@ -36,7 +36,7 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="text-white flex items-center">
             <motion.div whileHover={{ scale: 1.05 }} className="font-serif">
-              <img src="/logo.png" alt="Logo" width={120} />
+              <img src="/blueLogo.png" alt="Logo" width={150} />
             </motion.div>
           </Link>
 
